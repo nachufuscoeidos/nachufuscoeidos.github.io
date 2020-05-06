@@ -1,0 +1,116 @@
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Encode Sans", sans-serif;
+}
+
+h1 a {
+    color: #a13c87;
+    font-weight: bold;
+    
+}
+
+h1 a:hover {
+    color: #852d6e;
+}
+
+.meta-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.youtube-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+  
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+p.detalle {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: "Encode Sans", sans-serif;
+    margin-top: 20px;
+}
+
+section.feeds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    position: relative;
+}
+
+section.feeds article.photos {
+    width: 40%;
+}
+
+section.feeds article.twitter {
+    width: 50%;
+}
+
+article.twitter {
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+article.twitter::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+article.twitter::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+article.twitter::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+div.fotos-famosos {
+    width: 70%;
+    margin: 0 auto;
+}
+
+h2.subtitulo {
+    font-family: "Encode Sans", sans-serif;
+    color: #a13c87;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.follow {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .meta-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    section.feeds article.photos, section.feeds article.twitter {
+        width: 90%;
+    }
+}

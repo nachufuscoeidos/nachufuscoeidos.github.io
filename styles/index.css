@@ -1,0 +1,102 @@
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Encode Sans", sans-serif;
+}
+
+h1 a {
+    color: #a13c87;
+    font-weight: bold;
+    
+}
+
+h1 a:hover {
+    color: #852d6e;
+}
+
+.slider-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+p.detalle {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: "Encode Sans", sans-serif;
+}
+
+.ver-mas {
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    background-color: #a13c87;
+    font-size: 20px;
+    color: white;
+    font-family: "Encode Sans", sans-serif;
+}
+
+.ver-mas:hover, .ver-mas:active {
+    color: #a13c87;
+    background-color: white;
+    border: 1px solid #a13c87;
+} 
+
+.a-ver-mas:hover {
+    text-decoration: none;
+}
+
+section.datos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+    flex-wrap: wrap;
+    background-color: #a13c87;
+    padding-top: 50px;
+    padding-bottom: 33px;    
+}
+
+section.datos article {
+    width: 45%;
+    position: relative;
+}
+
+section.datos article h2 {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: -27px;
+    transform: translateX(-50%);
+    font-family: "Encode Sans", sans-serif;
+    background-color: rgb(161, 60, 135);
+    border: 2px solid white;
+    color: white;
+    padding: 10px 14px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+section.datos article h2:hover {
+    color: #a13c87;
+    background-color: white;
+}
+
+section.datos article ul {
+    border: 2px solid white;
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    section.datos article {
+        width: 90%;
+    }
+
+    section.datos article:first-child {
+        margin-bottom: 65px;
+    }
+}

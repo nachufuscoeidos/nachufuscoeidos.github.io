@@ -1,0 +1,79 @@
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Encode Sans", sans-serif;
+}
+
+h1 a {
+    color: #a13c87;
+    font-weight: bold;
+    
+}
+
+h1 a:hover {
+    color: #852d6e;
+}
+
+p.detalle {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: "Encode Sans", sans-serif;
+}
+
+h1 span {
+    color: #a13c87;
+    font-weight: bold;
+}
+
+section.inicio {
+    margin-bottom: 30px;
+}
+
+.section-recursos {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.uk-accordion-title, .uk-accordion-title:hover {
+    color: #a13c87;
+    text-decoration: underline;
+    font-family: "Encode Sans", sans-serif;
+}
+
+.uk-accordion-title:focus {
+    color: #a13c87;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.uk-open .uk-accordion-title {
+    font-weight: bold;
+}
+
+.grilla-recursos button {
+    margin-bottom: 10px !important;
+    border: #a13c87 1px solid;
+    color: #a13c87;
+    font-family: "Encode Sans", sans-serif;
+}
+
+.grilla-recursos button:hover, .grilla-recursos button:focus {
+    margin-bottom: 10px !important;
+    border: none;
+    color: white;
+    background-color: #a13c87;
+}
+
+.uk-modal h2, .uk-modal p, .uk-modal button {
+    font-family: "Encode Sans", sans-serif;
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 28px;
+    }
+}
+
