@@ -26,7 +26,7 @@ function fillUlSlider(fotos, idDOM) {
 
     for (let i = 0; i < fotos.length; i++) {
         let li = "<li>"
-        li += "<img src='" + fotos[i] + "'>"
+        li += "<img src='img/" + fotos[i] + "'>"
         li += "</li>"
 
         ul.innerHTML += li;
