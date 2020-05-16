@@ -1,3 +1,10 @@
+a.uk-position-center-left, a.uk-position-center-right {
+    background-color: #50A2A6 !important;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
 .uk-navbar-right {
     margin-right: 10px;
 }
@@ -9,6 +16,8 @@
 .uk-navbar-nav li a {
     font-family: "Encode Sans", sans-serif;
     font-weight: bold;
+    color: black;
+    font-size: 1rem;
 }
 
 .uk-navbar-nav li a.link-logo {
@@ -16,13 +25,14 @@
 }
 
 .logo {
-    width: 120px;
+    width: 100px;
 }
 
 span.by {
-    font-size: 25px;
+    font-size: 15px;
     margin-right: 15px;
     text-transform: none;
+    color: #999;
 }
 
 .menu-mobile {
@@ -31,7 +41,7 @@ span.by {
 
 section.alianzas {
     margin-top: 30px;
-    color:  rgb(161, 60, 135);
+    color:  #50A2A6;
     font-family: "Encode Sans", sans-serif;
     padding-top: 10px;
 }
@@ -49,6 +59,30 @@ section.alianzas p{
 
 footer {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .izquierda {
+    width: 20%;
+    margin-left: 5%;
+}
+
+footer .izquierda img {
+    width: 84px;
+}
+
+footer .derecha {
+    width: 20%;
+    margin-right: 5%;
+}
+
+footer .centro {
+    width: 50%;
+}
+
+footer .derecha img {
+    margin-top: 25px;
 }
 
 footer ul {
@@ -61,7 +95,7 @@ footer p {
 }
 
 footer ul li a svg {
-    color: #a13c87;
+    color: #50A2A6;
 }
 
 @media (max-width: 450px) {
@@ -79,5 +113,28 @@ footer ul li a svg {
 
     .menu-mobile {
         display: block;
+    }
+
+    footer .izquierda {
+        width: 40%;
+        order: 1;
+        text-align: center;
+    }
+    footer .centro {
+        width: 100%;
+        order: 3;
+        margin-top: 20px;
+    }
+
+    footer .derecha {
+        width: 45%;
+        margin-right: 10%;
+        text-align: center;
+        order: 2;
+    }
+
+    footer .derecha img {
+        width: 100%;
+        margin-top: 25px;
     }
 }

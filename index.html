@@ -51,7 +51,7 @@
     <section class="inicio">
         <h1>Sumate al <a href="https://twitter.com/search?q=%23AbrazoPorLaEducacion&src=typed_query" target="_blank">#AbrazoPorLaEducación<a></a></h1>
         <div class="slider-container">
-            <div uk-slider="sets:true">
+            <div uk-slider="sets:true;autoplay:true;autoplay-interval: 2000">
 
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
             
@@ -99,7 +99,7 @@
             
         </div>
         <p class="detalle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste totam necessitatibus temporibus? Facilis, eum tempore? Possimus repudiandae, tempora, in enim, ipsa obcaecati voluptas voluptates dicta consequatur ullam debitis doloremque est.
+            Según UNESCO, 156 millones de niños y niñas en América Latina no pueden ir a la escuela. Ayúdanos a abrazar de forma simbólica y a acompañar a educadorxs, docentes y a todas las personas que forman parte de nuestro ecosistema educativo, en su lucha diaria por asegurarse que ningún niño, niña o joven quede sin acceso a la educación.
         </p>
         <a class="a-ver-mas" href="camp.html">
             <button class="uk-button uk-button-default ver-mas">Ver más</button>
@@ -112,7 +112,7 @@
                     CIFRAS
                 </h2>
             </a>
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull;autoplay:true;autoplay-interval: 2000">
 
                 <ul class="uk-slideshow-items">
                     <li>
@@ -137,7 +137,7 @@
                     RECURSERO
                 </h2>
             </a>
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull;autoplay:true;autoplay-interval: 2000">
 
                 <ul class="uk-slideshow-items">
                     <li>
@@ -203,7 +203,9 @@
                         </li>
                         
                     </ul>
-            
+                    
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                 </div>
             
             
@@ -212,14 +214,22 @@
         </div>
     </section>
     <footer>
-        <ul class="uk-iconnav">
-            <li><a href="https://www.instagram.com/eidosglobal/" uk-icon="icon: instagram" target="_blank"></a></li>
-            <li><a href="https://www.facebook.com/EIDOSar" uk-icon="icon: facebook" target="_blank"></a></li>
-            <li><a href="https://twitter.com/EidosGlobal" uk-icon="icon: twitter" target="_blank"></a></li>
-            <li><a href="https://www.linkedin.com/company/eidosglobal" uk-icon="icon: linkedin" target="_blank"></a></li>
-            <li><a href="mailto:maru@eidosglobal.org" uk-icon="icon: mail" target="_blank"></a></li>
-        </ul>
-        <p>Made with love - EIDOS Global</p>
+        <div class="izquierda">
+            <img src="img/SDG4.png" alt="">
+        </div>
+        <div class="centro">
+            <ul class="uk-iconnav">
+                <li><a href="https://www.instagram.com/eidosglobal/" uk-icon="icon: instagram" target="_blank"></a></li>
+                <li><a href="https://www.facebook.com/EIDOSar" uk-icon="icon: facebook" target="_blank"></a></li>
+                <li><a href="https://twitter.com/EidosGlobal" uk-icon="icon: twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/company/eidosglobal" uk-icon="icon: linkedin" target="_blank"></a></li>
+                <li><a href="mailto:maru@eidosglobal.org" uk-icon="icon: mail" target="_blank"></a></li>
+            </ul>
+            <p>Made with love - EIDOS Global</p>
+        </div>
+        <div class="derecha">
+            <img src="img/logoSDG.png" alt="">
+        </div>
     </footer>
 </body>
 </html>
