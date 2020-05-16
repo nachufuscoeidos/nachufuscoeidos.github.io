@@ -17,8 +17,8 @@ function loaderSlider(fuente, idDOM) {
 }
 
 function fillUlSlider(fotos, idDOM) {
-    let ul = document.querySelector("ul slider-" + idDOM);
-    let loader = document.querySelector("loader-" + idDOM);
+    let ul = document.querySelector("ul .slider-" + idDOM);
+    let loader = document.querySelector(".loader-" + idDOM);
 
     loader.style.display = "none";
 
