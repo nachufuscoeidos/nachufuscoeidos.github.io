@@ -43,6 +43,13 @@ function loaderSlider(fuente, containerUl) {
 function fillUlSlider(fotos, containerUl) {
     let ul = document.querySelector(containerUl);
 
+    let loading = ul.querySelector(".loading");
+    console.log("----");
+    console.log(loading);
+    console.log("----");
+
+    loading.style.display = "none"
+
     for (let i = 0; i < fotos.length; i++) {
         let li = "<li>"
         li += "<img src='" + fotos[i] + "'>"
