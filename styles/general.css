@@ -98,6 +98,11 @@ footer ul li a svg {
     color: #50A2A6;
 }
 
+.slider-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 @media (max-width: 450px) {
     .logo {
         width: 100px;
