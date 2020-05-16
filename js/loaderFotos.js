@@ -14,6 +14,10 @@ function loaderSlider(fuente, containerUl) {
 
         fetch("https://raw.githubusercontent.com/nachufuscoeidos/recursos_abrazo/master/" + fuente)
         .then(function(response) {
+            if (!response.ok) {
+                // make the promise be rejected if we didn't get a 2xx response
+                throw new Error("Not 2xx response")
+            }
             return response.text();
         })
         .then(function(archivosStringGithub) {
