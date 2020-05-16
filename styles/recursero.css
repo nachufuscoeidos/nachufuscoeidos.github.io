@@ -5,13 +5,13 @@ h1 {
 }
 
 h1 a {
-    color: #a13c87;
+    color: #50A2A6;
     font-weight: bold;
     
 }
 
 h1 a:hover {
-    color: #852d6e;
+    color: #50A2A6;
 }
 
 p.detalle {
@@ -24,7 +24,7 @@ p.detalle {
 }
 
 h1 span {
-    color: #a13c87;
+    color: #50A2A6;
     font-weight: bold;
 }
 
@@ -38,13 +38,13 @@ section.inicio {
 }
 
 .uk-accordion-title, .uk-accordion-title:hover {
-    color: #a13c87;
+    color: #50A2A6;
     text-decoration: underline;
     font-family: "Encode Sans", sans-serif;
 }
 
 .uk-accordion-title:focus {
-    color: #a13c87;
+    color: #50A2A6;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -55,8 +55,8 @@ section.inicio {
 
 .grilla-recursos button {
     margin-bottom: 10px !important;
-    border: #a13c87 1px solid;
-    color: #a13c87;
+    border: #50A2A6 1px solid;
+    color: #50A2A6;
     font-family: "Encode Sans", sans-serif;
 }
 
@@ -64,7 +64,7 @@ section.inicio {
     margin-bottom: 10px !important;
     border: none;
     color: white;
-    background-color: #a13c87;
+    background-color: #50A2A6;
 }
 
 .uk-modal h2, .uk-modal p, .uk-modal button {

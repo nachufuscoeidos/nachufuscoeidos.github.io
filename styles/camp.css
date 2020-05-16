@@ -5,13 +5,13 @@ h1 {
 }
 
 h1 a {
-    color: #a13c87;
+    color: #50A2A6;
     font-weight: bold;
     
 }
 
 h1 a:hover {
-    color: #852d6e;
+    color: #50A2A6;
 }
 
 .meta-container {
@@ -90,7 +90,7 @@ div.fotos-famosos {
 
 h2.subtitulo {
     font-family: "Encode Sans", sans-serif;
-    color: #a13c87;
+    color: #50A2A6;
     text-align: center;
     font-weight: bold;
 }
