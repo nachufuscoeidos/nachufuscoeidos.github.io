@@ -1,4 +1,4 @@
-function loaderSlider(fuente, containerUl) {
+function loaderSlider(fuente, idDOM) {
     let fotos = [];
 
     fetch("img/" + fuente)
@@ -12,14 +12,17 @@ function loaderSlider(fuente, containerUl) {
             fotos.push(archivos[i].trim());
         }
 
-        fillUlSlider(fotos, containerUl);
+        fillUlSlider(fotos, idDOM);
     })
 }
 
-function fillUlSlider(fotos, containerUl) {
-    let ul = document.querySelector(containerUl);
+function fillUlSlider(fotos, idDOM) {
+    let ul = document.querySelector("ul slider-" + idDOM);
+    let loader = document.querySelector("loader-" + idDOM);
 
-    ul.innerHTML = ""
+    loader.style.display = "none";
+
+    ul.innerHTML = "";
 
     for (let i = 0; i < fotos.length; i++) {
         let li = "<li>"
@@ -30,6 +33,6 @@ function fillUlSlider(fotos, containerUl) {
     }
 }
 
-function loaderSlideshow(fuentes, containerUl) {
+function loaderSlideshow(fuentes, idDOM) {
 
 }

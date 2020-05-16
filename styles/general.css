@@ -1,3 +1,9 @@
+.loader {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 a.uk-position-center-left, a.uk-position-center-right {
     background-color: #50A2A6 !important;
     color: white;
