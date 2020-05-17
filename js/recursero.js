@@ -1,9 +1,9 @@
 window.addEventListener("load", paginaRecursero);
 
 function paginaRecursero() {
-    let recursos = {};
+    let recursos = [];
 
-    fetch("https://raw.githubusercontent.com/nachufuscoeidos/recursos_abrazo/master/recursero.csv")
+    fetch("assets/recursero.csv")
     .then(function(response) {
         return response.text();
     })
@@ -15,7 +15,7 @@ function paginaRecursero() {
             recursos = agregarRecurso(recursos, preRecursos[i])
         }
 
-        console.log(recursos);
+        mostrarRecursos(recursos);
         
     })
     .catch(function(e) {
@@ -106,27 +106,129 @@ function CSVToArray( strData, strDelimiter ){
 }
 
 function agregarRecurso(lista, elemento) {
-    if (elemento.length != 4) {
+    if (elemento.length != 7) {
         console.log("Error with resource");
         console.log(elemento);
         return lista;
     }
     
-    let categoria = elemento[2];
     let archivo = {
         nombre: elemento[0],
         archivo: elemento[1],
-        tipo: elemento[3]
+        categoria: elemento[2],
+        proveedor: elemento[3],
+        descripcion: elemento[4],
+        tipo: elemento[5],
+        url: elemento[6]
+        
     }
 
-    if (!lista.hasOwnProperty(categoria)) {
-        lista[categoria] = {
-            nombre: categoria,
-            archivos: []
-        };
-    }
-
-    lista[categoria].archivos.push(archivo)
+    lista.push(archivo)
 
     return lista;
+}
+
+function mostrarRecursos(recursos) {
+    for (let i = 0; i < recursos.length; i++) {
+        let seccionCategoria = document.querySelector(".cat-" + recursos[i].categoria)
+        seccionCategoria.innerHTML += '<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-' + i + '">' + recursos[i].nombre + '</button>'
+        crearModal(recursos[i], i)
+    }
+    
+    document.querySelector(".loader-recursos").style.display = "none"
+    document.querySelector(".section-recursos").style.display = "block";
+}
+
+function crearModal(recurso, idModal) {
+    if (recurso.tipo.toLowerCase() == "pdf") {
+        crearModalPDF(recurso, idModal)
+    }
+
+    if (recurso.tipo.toLowerCase() == "youtube") {
+        crearModalYoutube(recurso, idModal)
+    }
+
+    if (recurso.tipo.toLowerCase() == "link") {
+        crearModalLink(recurso, idModal)
+    }
+}
+
+function crearModalPDF(recurso, idModal) {
+    let modal = "";
+
+    modal += '<div id="modal-' + idModal + '" uk-modal>'
+    modal += '<div class="uk-modal-dialog uk-modal-body">'
+    modal += '<h2 class="uk-modal-title">' + recurso.nombre + '</h2>'
+    modal += '<h4 class="modal-subtitle">Aportado por ' + recurso.proveedor + '</h4>'
+
+    if (recurso.descripcion.trim() != "") {
+        modal += "<p>" +  recurso.descripcion + "</p>"
+    }
+
+    modal += '<div>'
+    modal += "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='" + recurso.url + "' width='640' height='480'></iframe></div>"
+    modal += '</div>'
+    modal += '<p class="uk-text-right">'
+    modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
+    if (recurso.archivo != "") {
+        modal += '<a href="assets/' + recurso.archivo + '" download target="_blank">'
+        modal += '<button class="uk-button uk-button-primary boton-descarga" type="button">Descargar</button>'
+        modal += '</a>'
+    }
+    modal += '</p>'
+    modal += '</div>'
+    modal += '</div>'
+
+    document.querySelector("div.modales").innerHTML += modal;
+}
+
+function crearModalYoutube(recurso, idModal) {
+
+    let codigoYoutube = recurso.url.split("=")[1]
+
+    let modal = "";
+
+    modal += '<div id="modal-' + idModal + '" uk-modal>'
+    modal += '<div class="uk-modal-dialog uk-modal-body">'
+    modal += '<h2 class="uk-modal-title">' + recurso.nombre + '</h2>'
+    modal += '<h4 class="modal-subtitle">Aportado por ' + recurso.proveedor + '</h4>'
+
+    if (recurso.descripcion.trim() != "") {
+        modal += "<p>" +  recurso.descripcion + "</p>"
+    }
+
+    modal += '<div>'
+    modal += "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/" + codigoYoutube + "' frameborder='0' allowfullscreen></iframe></div>"
+    modal += '</div>'
+    modal += '<p class="uk-text-right">'
+    modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
+    modal += '</p>'
+    modal += '</div>'
+    modal += '</div>'
+
+    document.querySelector("div.modales").innerHTML += modal;
+} 
+
+function crearModalLink(recurso, idModal) {
+    let modal = "";
+
+    modal += '<div id="modal-' + idModal + '" uk-modal>'
+    modal += '<div class="uk-modal-dialog uk-modal-body">'
+    modal += '<h2 class="uk-modal-title">' + recurso.nombre + '</h2>'
+    modal += '<h4 class="modal-subtitle">Aportado por ' + recurso.proveedor + '</h4>'
+
+    if (recurso.descripcion.trim() != "") {
+        modal += "<p>" +  recurso.descripcion + "</p>"
+    }
+
+    modal += '<p class="uk-text-right">'
+    modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
+    modal += '<a href="' + recurso.url + '" target="_blank">'
+    modal += '<button class="uk-button uk-button-primary boton-descarga" type="button">Ver Nota</button>'
+    modal += '</a>'
+    modal += '</p>'
+    modal += '</div>'
+    modal += '</div>'
+
+    document.querySelector("div.modales").innerHTML += modal;
 }

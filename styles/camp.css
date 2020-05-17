@@ -145,6 +145,22 @@ div.follow {
     justify-content: center;
 }
 
+div.comunicado {
+    text-align: center;
+}
+
+div.comunicado button, div.comunicado button:hover, div.comunicado button:visited, div.comunicado button:focus {
+    border: 1px solid #50A2A6;
+    color: #50A2A6;
+    margin-top: 20px;
+}
+
+img.placa-2020 {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
 @media (max-width: 450px) {
     h1 {
         font-size: 28px;

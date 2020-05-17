@@ -1,5 +1,17 @@
-Nombre,Archivo,Categoria,Tipo
-Informe Tecla,tecla.pdf,Cat 1,PDF
-Azurduy,informe_azurduy.pdf,Cat2,PDF
-Azurduy,informe_azurduy.pdf,Cat2,PDF
-Azurduy,informe_azurduy.pdf,Cat2,PDF
+Nombre,Archivo,Categoria,Proveedor,Descripción,Tipo,URL
+Informe Tecla,tecla.pdf,1,A,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,B,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,C,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,D,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,E,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,2,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,3,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,4,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Azurduy,informe_azurduy.pdf,5,F,,PDF,https://drive.google.com/file/d/1NsECWMq66lJdP0TGAXBNl_zaSBQQZ_T3/preview
+Video Azurduy,,1,Daro Crack,Va la desc,Youtube,https://www.youtube.com/watch?v=kNN5dEVbk6Y
+Ejemplo Link,,1,Daro Crack,Va la desc,Link,https://www.sobretiza.com.ar/2020/04/29/el-desafio-que-impone-el-covid-19-humanizar-el-aprendizaje-a-distancia/

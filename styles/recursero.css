@@ -2,6 +2,19 @@ h1 {
     margin-top: 30px;
     text-align: center;
     font-family: "Encode Sans", sans-serif;
+    background-image: url("../img/patron.png");
+    margin: 15px auto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 span {
+    font-weight: bold;
 }
 
 h1 a {
@@ -15,17 +28,17 @@ h1 a:hover {
 }
 
 p.detalle {
-    text-align: center;
+    text-align: justify;
     width: 80%;
     margin: 0 auto;
     font-size: 25px;
-    line-height: 32px;
+    line-height: 34px;
     font-family: "Encode Sans", sans-serif;
+    margin-top: 10px;
 }
 
-h1 span {
+strong.navega {
     color: #50A2A6;
-    font-weight: bold;
 }
 
 section.inicio {
@@ -35,16 +48,30 @@ section.inicio {
 .section-recursos {
     width: 80%;
     margin: 0 auto;
+    display: none;
+}
+
+.modal-subtitle {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.boton-descarga {
+    margin-left: 10px;
+    background-color: #50A2A6;
 }
 
 .uk-accordion-title, .uk-accordion-title:hover {
-    color: #50A2A6;
+    background-image: url("../img/patron.png");
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
     text-decoration: underline;
     font-family: "Encode Sans", sans-serif;
 }
 
-.uk-accordion-title:focus {
-    color: #50A2A6;
+.uk-accordion-title:focus, .uk-accordion-title:visited, .uk-accordion-title:active {
+    color: white;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -69,6 +96,12 @@ section.inicio {
 
 .uk-modal h2, .uk-modal p, .uk-modal button {
     font-family: "Encode Sans", sans-serif;
+}
+
+.uk-accordion-title::before
+{
+    background-color: white;
+    border-radius: 50%;
 }
 
 @media (max-width: 450px) {
