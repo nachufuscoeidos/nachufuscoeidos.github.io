@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/camp.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abrazo por la Educación by Eidos</title>
@@ -51,7 +52,8 @@
         </nav>
     </header>
     <section class="inicio">
-        <h1>Sumate al <a href="https://twitter.com/search?q=%23AbrazoPorLaEducacion&src=typed_query" target="_blank">#AbrazoPorLaEducación<a></a></h1>
+        <h1><strong>Juntxs</strong> el abrazo se hace más fuerte</h1>
+        <h2 class="link-a-redes"><a href="https://twitter.com/search?q=%23AbrazoPorLaEducacion&src=typed_query" target="_blank">#AbrazoPorLaEducación</a></h2>
         <div class="meta-container">
             <div class="youtube-container"> 
                 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/kNN5dEVbk6Y"></iframe>
@@ -59,8 +61,24 @@
         </div>
 
         <p class="detalle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste totam necessitatibus temporibus? Facilis, eum tempore? Possimus repudiandae, tempora, in enim, ipsa obcaecati voluptas voluptates dicta consequatur ullam debitis doloremque est.
+            Según UNESCO, 156 millones de niños y niñas en América Latina no pueden ir a la escuela. 
+
+            Con casi la mitad del mundo sin acceso a internet, si no se incluye a la educación dentro de los sectores que requieren financiamiento prioritario durante la Pandemia, corremos el riesgo de que las consecuencias sean irreversibles, en especial en zonas rurales y vulnerables de nuestro continente.
+            <span class="texto-oculto">
+                #UnAbrazoPorLaEducación nació del deseo, no sólo de reconocer la labor incansable en esta crisis de nuestrxs docentes, educadorxs y todas las personas que forman parte del ecosistema educativo, sino también de darles soporte con recursos pedagógicos para que la educación no se interrumpa, acompañando a padres, madres, niños, niñas y jóvenes a seguir aprendiendo #DesdeCasa.
+
+                Para hacerlo y gracias al apoyo de innumerables organizaciones intergubernamentales, sociales y empresas de todo el continente latinoamericano, hemos recopilado CIFRAS sobre de status de la educación actual y RECURSOS académicos gratuitos pensados para ser usados libremente por educadores y estudiantes.
+
+                Desde Eidos, UNESCO y todas las organizaciones que forman parte de esta campaña, estamos convencidos de que juntxs podemos lograr que la Educación le gane la batalla 
+                al COVID-19.
+
+                Nuestro compromiso conjunto es y sigue siendo, el construir un mundo en el que nadie quede por fuera por falta de acceso a oportunidades y al conocimiento necesario para poder aprovecharlas.
+            </span>
+
         </p>
+        <a class="a-ver-mas" href="#">
+            <button class="uk-button uk-button-default ver-mas">Ver más</button>
+        </a>
           
     </section>
 
@@ -73,20 +91,13 @@
     
     <section class="feeds">
         <article class="photos">
+            <div class="loader loader-famosos" uk-spinner></div>
             <div class="fotos-famosos" uk-slideshow="animation: push;autplay:true;autoplay-interval:2000;ratio:4:5">
 
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
             
-                    <ul class="uk-slideshow-items">
-                        <li>
-                            <img src="img/famous.jpg" alt="" uk-cover>
-                        </li>
-                        <li>
-                            <img src="img/famous.jpg" alt="" uk-cover>>
-                        </li>
-                        <li>
-                            <img src="img/famous.jpg" alt="" uk-cover>
-                        </li>
+                    <ul class="slider-famosos uk-slideshow-items">
+                        <li></li>
                     </ul>
             
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>

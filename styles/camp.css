@@ -2,16 +2,30 @@ h1 {
     margin-top: 30px;
     text-align: center;
     font-family: "Encode Sans", sans-serif;
+    background-image: url("../img/patron.png");
+    margin: 15px auto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-h1 a {
+h2.link-a-redes {
+    text-align: center;
+    margin-top: 0px;
+}
+
+h2.link-a-redes a {
     color: #50A2A6;
     font-weight: bold;
-    
 }
 
-h1 a:hover {
-    color: #50A2A6;
+h2.link-a-redes a:hover {
+    text-decoration: none;
+    color: #366d70;
 }
 
 .meta-container {
@@ -38,13 +52,41 @@ h1 a:hover {
 }
 
 p.detalle {
-    text-align: center;
+    text-align: justify;
     width: 80%;
     margin: 0 auto;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 34px;
     font-family: "Encode Sans", sans-serif;
     margin-top: 20px;
+}
+
+span.texto-oculto {
+    display: none;
+}
+
+.ver-mas {
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    font-family: "Encode Sans", sans-serif;
+    background-image: url(../img/outline_boton.png);
+    border: 0;
+    background-size: cover;
+    padding-bottom: 8px;
+    color: #50A2A6 !important;
+    padding-top: 5px;
+}
+
+.ver-mas:hover, .ver-mas:active {
+    color: #50A2A6;
+}
+
+.a-ver-mas:hover {
+    text-decoration: none;
 }
 
 section.feeds {
@@ -61,6 +103,8 @@ section.feeds article.photos {
 
 section.feeds article.twitter {
     width: 50%;
+    border: 1px solid #50A2A6;
+    border-radius: 7px;
 }
 
 article.twitter {
@@ -93,6 +137,7 @@ h2.subtitulo {
     color: #50A2A6;
     text-align: center;
     font-weight: bold;
+    font-size: 2.5rem;
 }
 
 div.follow {

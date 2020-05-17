@@ -44,12 +44,12 @@ p.detalle {
     border: 0;
     background-size: cover;
     padding-bottom: 8px;
-    color: #50A2A6;
+    color: #50A2A6 !important;
     padding-top: 5px;
 }
 
-.ver-mas:hover, .ver-mas:active {
-    color: #50A2A6;
+.ver-mas:hover, .ver-mas:active, .ver-mas:focus, .ver-mas:visited, .ver-mas:focus-within {
+    color: #50A2A6 !important;
 }
 
 .a-ver-mas:hover {
