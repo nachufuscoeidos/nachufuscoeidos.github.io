@@ -56,6 +56,12 @@ p.detalle {
     text-decoration: none;
 }
 
+div.contenedorPlacas {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
 section.datos {
     display: flex;
     justify-content: space-around;
@@ -65,6 +71,7 @@ section.datos {
     padding-top: 50px;
     padding-bottom: 33px;    
     background-size: contain;
+    margin-bottom: 25px;
 }
 
 section.datos article {
@@ -112,4 +119,10 @@ section.datos article ul {
     section.datos article:first-child {
         margin-bottom: 65px;
     }
+
+    div.contenedorPlacas {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
 }
