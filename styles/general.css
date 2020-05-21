@@ -70,8 +70,9 @@ footer {
 }
 
 footer .izquierda {
-    width: 20%;
+    width: 30%;
     margin-left: 5%;
+    text-align: right;
 }
 
 footer .izquierda img {
@@ -79,16 +80,17 @@ footer .izquierda img {
 }
 
 footer .derecha {
-    width: 20%;
+    width: 30%;
     margin-right: 5%;
 }
 
 footer .centro {
-    width: 50%;
+    width: 30%;
 }
 
 footer .derecha img {
     margin-top: 25px;
+    width: 210px;
 }
 
 footer ul {
@@ -147,5 +149,9 @@ footer ul li a svg {
     footer .derecha img {
         width: 100%;
         margin-top: 25px;
+    }
+
+    footer .izquierda img {
+        width: 60px;
     }
 }

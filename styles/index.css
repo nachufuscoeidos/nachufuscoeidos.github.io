@@ -1,4 +1,4 @@
-h1 {
+h1, h2.tituloSecundario {
     margin-top: 30px;
     text-align: center;
     font-family: "Encode Sans", sans-serif;
@@ -71,7 +71,7 @@ section.datos {
     padding-top: 50px;
     padding-bottom: 33px;    
     background-size: contain;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 section.datos article {
@@ -124,5 +124,9 @@ section.datos article ul {
         width: 80%;
         margin: 0 auto;
     }
-    
+
+    p.detalle {
+        font-size: 20px;
+        margin-top: 15px;
+    }
 }
