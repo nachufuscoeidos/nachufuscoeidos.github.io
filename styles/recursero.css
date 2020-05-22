@@ -104,6 +104,25 @@ section.inicio {
     border-radius: 50%;
 }
 
+.newsletter button {
+    margin-bottom: 10px !important;
+    border: #50A2A6 1px solid;
+    color: #50A2A6;
+    font-family: "Encode Sans", sans-serif;
+    margin-top: 15px;
+}
+
+.newsletter button:hover, .newsletter button:focus {
+    margin-bottom: 10px !important;
+    border: none;
+    color: white;
+    background-color: #50A2A6;
+}
+
+.newsletter {
+    text-align: center;
+}
+
 @media (max-width: 450px) {
     h1 {
         font-size: 28px;
