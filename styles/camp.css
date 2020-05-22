@@ -21,6 +21,7 @@ h2.link-a-redes {
 h2.link-a-redes a {
     color: #50A2A6;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 h2.link-a-redes a:hover {
@@ -61,8 +62,23 @@ p.detalle {
     margin-top: 20px;
 }
 
+p.center {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Encode Sans", sans-serif;
+    color: #50A2A6;
+}
+
 span.texto-oculto {
     display: none;
+}
+
+span.mas-chico {
+    font-size: 10px;
 }
 
 .ver-mas {
@@ -161,6 +177,26 @@ img.placa-2020 {
     display: block;
 }
 
+div.logosAlianzas img {
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+div.logosAlianzas {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   width: 90%;
+   margin: 0 auto;
+   margin-top: 50px;
+}
+
+section.prensa {
+    margin-bottom: -40px;
+}
+
+div.logosAlianzas div{
+}
+
 @media (max-width: 450px) {
     h1 {
         font-size: 28px;
@@ -173,5 +209,13 @@ img.placa-2020 {
 
     section.feeds article.photos, section.feeds article.twitter {
         width: 90%;
+    }
+
+    div.logosAlianzas {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
+
+    section.prensa {
+        margin-top: 20px;
     }
 }
