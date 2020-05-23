@@ -3,7 +3,7 @@ window.addEventListener("load", paginaRecursero);
 function paginaRecursero() {
     let recursos = [];
 
-    fetch("https://cors-anywhere.herokuapp.com/https://abrazoporlaeducacion.org/assets/recursero.csv")
+    fetch("assets/recursero.csv")
     .then(function(response) {
         return response.text();
     })
