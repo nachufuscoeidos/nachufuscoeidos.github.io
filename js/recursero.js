@@ -176,10 +176,10 @@ function crearModalPDF(recurso, idModal, listaRecursos) {
     modal += '</div>'
     modal += '<p class="uk-text-right">'
     if (necesitoBotonAnterior(idModal, listaRecursos)) {
-        modal += '<button class="uk-button uk-button-default boton-ant" type="button">Ant</button>'
+        modal += '<button class="uk-button uk-button-default boton-ant" type="button"><span uk-icon="icon:chevron-double-left; ratio: 1.5"></span></button>'
     }
     if (necesitoBotonSiguiente(idModal, listaRecursos)) {
-        modal += '<button class="uk-button uk-button-default boton-sig" type="button">Sig</button>'
+        modal += '<button class="uk-button uk-button-default boton-sig" type="button"><span uk-icon="icon:chevron-double-right; ratio: 1.5"></span></button>'
     }
     modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
     if (recurso.archivo != "") {
@@ -229,10 +229,10 @@ function crearModalYoutube(recurso, idModal, listaRecursos) {
     modal += '</div>'
     modal += '<p class="uk-text-right">'
     if (necesitoBotonAnterior(idModal, listaRecursos)) {
-        modal += '<button class="uk-button uk-button-default boton-ant" type="button">Ant</button>'
+        modal += '<button class="uk-button uk-button-default boton-ant" type="button"><span uk-icon="icon:chevron-double-left; ratio: 1.5"></span></button>'
     }
     if (necesitoBotonSiguiente(idModal, listaRecursos)) {
-        modal += '<button class="uk-button uk-button-default boton-sig" type="button">Sig</button>'
+        modal += '<button class="uk-button uk-button-default boton-sig" type="button"><span uk-icon="icon:chevron-double-right; ratio: 1.5"></span></button>'
     }
     modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
     modal += '</p>'
@@ -271,10 +271,10 @@ function crearModalLink(recurso, idModal, listaRecursos) {
 
     modal += '<p class="uk-text-right">'
     if (necesitoBotonAnterior(idModal, listaRecursos)) {
-        modal += '<button class="uk-button uk-button-default boton-ant" type="button">Ant</button>'
+        modal += '<button class="uk-button uk-button-default boton-ant" type="button"><span uk-icon="icon:chevron-double-left; ratio: 1.5"></span></button>'
     }
     if (necesitoBotonSiguiente(idModal, listaRecursos)) {
-        modal += '<button class="uk-button uk-button-default boton-sig" type="button">Sig</button>'
+        modal += '<button class="uk-button uk-button-default boton-sig" type="button"><span uk-icon="icon:chevron-double-right; ratio: 1.5"></span></button>'
     }
     modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
     modal += '<a href="' + recurso.url + '" target="_blank">'

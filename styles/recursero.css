@@ -124,6 +124,26 @@ section.inicio {
     margin-top: 20px;
 }
 
+.boton-sig, .boton-sig:hover, .boton-sig:focus, .boton-sig:active {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(75%, -50%);
+    background-color: #50A2A6;
+    color: white;
+    padding: 4px 10px;
+}
+
+.boton-ant, .boton-ant:hover, .boton-ant:focus, .boton-ant:active {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-75%, -50%);
+    background-color: #50A2A6;
+    color: white;
+    padding: 4px 10px;
+}
+
 @media (max-width: 450px) {
     h1 {
         font-size: 28px;
