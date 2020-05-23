@@ -131,9 +131,16 @@ function agregarRecurso(lista, elemento) {
 function mostrarRecursos(recursos) {
     for (let i = 0; i < recursos.length; i++) {
         let seccionCategoria = document.querySelector(".cat-" + recursos[i].categoria)
-        seccionCategoria.innerHTML += '<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-' + i + '">' + recursos[i].nombre + '</button>'
-        crearModal(recursos[i], i)
+        seccionCategoria.innerHTML += '<button class="uk-button uk-button-default uk-margin-small-right boton-modal" type="button" uk-toggle="target: #modal-recurso">' + recursos[i].nombre + '</button>'
     }
+
+    let botones = document.querySelectorAll(".boton-modal")
+    for (let i = 0; i < botones.length; i++) {
+        botones[i].addEventListener("click", function() {
+            crearModal(recursos[i], i)            
+        })
+    }
+    
     
     document.querySelector(".loader-recursos").style.display = "none"
     document.querySelector(".section-recursos").style.display = "block";
@@ -156,7 +163,6 @@ function crearModal(recurso, idModal) {
 function crearModalPDF(recurso, idModal) {
     let modal = "";
 
-    modal += '<div id="modal-' + idModal + '" uk-modal>'
     modal += '<div class="uk-modal-dialog uk-modal-body">'
     modal += '<h2 class="uk-modal-title">' + recurso.nombre + '</h2>'
     modal += '<h4 class="modal-subtitle">Aportado por ' + recurso.proveedor + '</h4>'
@@ -177,9 +183,8 @@ function crearModalPDF(recurso, idModal) {
     }
     modal += '</p>'
     modal += '</div>'
-    modal += '</div>'
 
-    document.querySelector("div.modales").innerHTML += modal;
+    document.querySelector("#modal-recurso").innerHTML = modal;
 }
 
 function crearModalYoutube(recurso, idModal) {
@@ -188,7 +193,6 @@ function crearModalYoutube(recurso, idModal) {
 
     let modal = "";
 
-    modal += '<div id="modal-' + idModal + '" uk-modal>'
     modal += '<div class="uk-modal-dialog uk-modal-body">'
     modal += '<h2 class="uk-modal-title">' + recurso.nombre + '</h2>'
     modal += '<h4 class="modal-subtitle">Aportado por ' + recurso.proveedor + '</h4>'
@@ -204,15 +208,13 @@ function crearModalYoutube(recurso, idModal) {
     modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
     modal += '</p>'
     modal += '</div>'
-    modal += '</div>'
 
-    document.querySelector("div.modales").innerHTML += modal;
+    document.querySelector("#modal-recurso").innerHTML = modal;
 } 
 
 function crearModalLink(recurso, idModal) {
     let modal = "";
 
-    modal += '<div id="modal-' + idModal + '" uk-modal>'
     modal += '<div class="uk-modal-dialog uk-modal-body">'
     modal += '<h2 class="uk-modal-title">' + recurso.nombre + '</h2>'
     modal += '<h4 class="modal-subtitle">Aportado por ' + recurso.proveedor + '</h4>'
@@ -228,7 +230,6 @@ function crearModalLink(recurso, idModal) {
     modal += '</a>'
     modal += '</p>'
     modal += '</div>'
-    modal += '</div>'
 
-    document.querySelector("div.modales").innerHTML += modal;
+    document.querySelector("#modal-recurso").innerHTML = modal;
 }
