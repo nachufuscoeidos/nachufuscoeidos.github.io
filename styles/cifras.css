@@ -44,7 +44,7 @@ section.infografia {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 section.infografia div {
@@ -59,60 +59,32 @@ section.infografia div img {
 
 section.infografia div p {
     position: absolute;
-    top: 35px;
-    font-size: 20px;
-    background-color: rgba(66,66,66,0.45);
-    padding: 2px 5px;
+    top: 50%;
     color: white;
     font-family: "Encode Sans", sans-serif;
-    font-weight: bold;
-    max-width: 80%;
-}
-
-section.infografia div p.test2 {
-    font-size: 30px;
-    line-height: 40px;
-    padding: 20px;
-}
-
-section.infografia div p.test3 {
-    font-size: 30px;
-    line-height: 40px;
-    padding: 20px;
-    background-color: transparent;
-}
-
-section.infografia div p.test4 {
-    font-size: 30px;
-    line-height: 40px;
-    padding: 20px;
-    background-color: transparent;
-    color: black;
-}
-
-section.infografia div p.test5 {
-    font-size: 30px;
-    line-height: 40px;
-    padding: 20px;
-    color: black;
-    background-color: rgba(255,255,255,0.45);
-
-}
-
-section.infografia div p.izq {
-    left: 40px;
-    text-align: left;
-}
-
-section.infografia div p.der {
-    right: 40px;
-    text-align: right;
-}
-
-section.infografia div p.test2 {
+    width: 80%;
     font-size: 25px;
+    line-height: 33px;
     padding: 20px;
+    background-color: transparent;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+section.infografia div p strong {
+    font-size: 1.2em;
+}
+
+section.infografia div p span {
+    font-size: 0.8em;
+}
+
+section.infografia div p a {
+    color: white;
+    
+}
+
 
 @media (max-width: 450px) {
     h1 {
@@ -124,4 +96,10 @@ section.infografia div p.test2 {
         margin-bottom: 15px;
         position: relative;
     }
+
+    section.infografia div p { 
+        font-size: 21px;
+        line-height: 27px;
+    }
+    
 }
