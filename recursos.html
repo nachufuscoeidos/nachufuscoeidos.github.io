@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrazo por la Educación by Eidos</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.3/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.3/dist/js/uikit-icons.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/recursero.css">
+    <script src="js/recursero.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163169623-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-163169623-2');
+    </script>
+
+</head>
+<body>
+    <header>
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="menu-escritorio"><a href="/"><span uk-icon="icon: home; ratio: 1.5"></span></a></li>
+                    <li class="menu-escritorio"><a href="camp.html">Campaña</a></li>
+                    <li class="menu-escritorio"><a href="cifras.html">Cifras</a></li>
+                    <li class="menu-escritorio"><a href="recursos.html">Recursos</a></li>
+                    <li class="menu-mobile">
+                        <a href="#"><span uk-icon="icon: menu; ratio: 1.5"></span></a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class=""><a href="/">Inicio</a></li>
+                                <li class=""><a href="camp.html">Campaña</a></li>
+                                <li class=""><a href="cifras.html">Cifras</a></li>
+                                <li class=""><a href="recursos.html">Recursos</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a class="link-logo" href="https://eidosglobal.org" target="_blank">
+                            <span class="by">Hecho por</span>
+                            <img class="logo" src="img/logo.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="inicio">
+        <h1>Biblioteca de <span>recursos</span></h1>
+
+        <p class="detalle">
+            Gracias al apoyo de numerosas organizaciones, co construímos esta biblioteca de recursos de acceso libre y gratuito pensado para personas que quieran aprender o enseñar desde casa.
+        </p>
+        <p class="detalle">
+            En esta biblioteca encontrarás guías de aprendizaje, videojuegos educativos, webinars en vivo, formaciones en video, oportunidades de formación profesional y muchos recursos más.
+        </p>
+        <p class="detalle">
+           <strong class="navega">¡Navega la biblioteca y descubre todos los recursos disponibles!</strong>
+        </p>
+    </section>
+
+    <div class="loader loader-recursos" uk-spinner></div>
+    <section class="section-recursos">
+        <ul uk-accordion class="recursero">
+            <li>
+                <a class="uk-accordion-title" href="#">Recursos para enseñar</a>
+                <div class="uk-accordion-content grilla-recursos cat-1">
+                    <p>Materiales para dar apoyo a educadores/as, docentes y personas que necesiten herramientas pedagógicas para sus clases de forma remota.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">Recursos para aprender</a>
+                <div class="uk-accordion-content grilla-recursos cat-2">
+                    <p>Materiales para dar apoyo a estudiantes y familias que necesiten herramientas para aprender o acompañar a sus hijos/as en el aprendizaje desde casa.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">Oportunidades de formación profesional</a>
+                <div class="uk-accordion-content grilla-recursos cat-3">
+                    <p>Materiales para personas que quieran aprovechar la cuarentena para potenciar sus habilidades y su perfil laboral.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">Notas de reflexión</a>
+                <div class="uk-accordion-content grilla-recursos cat-4">
+                    <p>Conocé de la mano de expertos/as cuál es la situación actual de la educación.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">Materiales de UNESCO</a>
+                <div class="uk-accordion-content grilla-recursos cat-5">
+                    <p>A raíz de la pandemia UNESCO creó una plataforma con Recursos para Docentes para la Escuela del siglo XXI</p>
+                    <a href="https://es.unesco.org/fieldoffice/montevideo/DocentesEscuelaSigloXXI" target="_blank">
+                        <button class="uk-button uk-button-default uk-margin-small-right" type="button">Accedé a la plataforma</button>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">Otros recursos</a>
+                <div class="uk-accordion-content grilla-recursos cat-6">
+                    <p>Una sección con buenas prácticas, tips, trucos y próximos eventos para seguir aprendiendo.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="newsletter">
+        <p class="detalle">
+            Suscríbete a nuestro newsletter y recibe en tu casilla recursos valiosos de aprendizaje, oportunidades de formación gratuitas y contenidos pedagógicos curados por el equipo Eidos. 
+        </p>
+        <a href="https://eidosglobal.us3.list-manage.com/subscribe?u=f0cd53dc66564ba33b80c6110&id=ff172a1c93" target="_blank">
+            <button class="uk-button uk-button-default uk-margin-small-right" type="button">Suscríbete</button>
+        </a>
+    </section>
+
+    <section class="alianzas">
+        <p>Se sumaron al abrazo</p>
+        <div class="slider-container">
+            <div uk-slider="autoplay:true;autoplay-interval: 2000">
+
+                <div class="container-aliados uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+            
+                    <ul class="slider-aliados uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m uk-grid">
+                        <li>
+                            <img src="img/ceibal.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/imjuve.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/oji.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/ceibal.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/imjuve.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/oji.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/ceibal.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/imjuve.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/oji.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/ceibal.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/imjuve.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/oji.png" alt="">
+                        </li>
+                        
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            
+                </div>
+            
+            
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="izquierda">
+            <img src="img/SDG4.png" alt="">
+        </div>
+        <div class="centro">
+            <ul class="uk-iconnav">
+                <li><a href="https://www.instagram.com/eidosglobal/" uk-icon="icon: instagram" target="_blank"></a></li>
+                <li><a href="https://www.facebook.com/EIDOSar" uk-icon="icon: facebook" target="_blank"></a></li>
+                <li><a href="https://twitter.com/EidosGlobal" uk-icon="icon: twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/company/eidosglobal" uk-icon="icon: linkedin" target="_blank"></a></li>
+                <li><a href="mailto:maru@eidosglobal.org" uk-icon="icon: mail" target="_blank"></a></li>
+            </ul>
+            <p>Made with love - EIDOS Global</p>
+        </div>
+        <div class="derecha">
+            <img src="img/logoSDG.png" alt="">
+        </div>
+    </footer>
+
+
+    <!--Inicio Modales-->
+
+    <!--http://embedresponsively.com/-->
+
+    <div class="modales">
+
+    </div>
+    <!--Fin Modales-->
+</body>
+</html>
