@@ -3,7 +3,7 @@ window.addEventListener("load", paginaRecursero);
 function paginaRecursero() {
     let recursos = [];
 
-    fetch("assets/recursero.csv")
+    fetch("https://cors-anywhere.herokuapp.com/https://abrazoporlaeducacion.org/assets/recursero.csv")
     .then(function(response) {
         return response.text();
     })
@@ -137,7 +137,7 @@ function mostrarRecursos(recursos) {
     let botones = document.querySelectorAll(".boton-modal")
     for (let i = 0; i < botones.length; i++) {
         botones[i].addEventListener("click", function() {
-            crearModal(recursos[i], i)            
+            crearModal(recursos[i], i, recursos)            
         })
     }
     
@@ -146,21 +146,21 @@ function mostrarRecursos(recursos) {
     document.querySelector(".section-recursos").style.display = "block";
 }
 
-function crearModal(recurso, idModal) {
+function crearModal(recurso, idModal, listaRecursos) {
     if (recurso.tipo.toLowerCase() == "pdf") {
-        crearModalPDF(recurso, idModal)
+        crearModalPDF(recurso, idModal, listaRecursos)
     }
 
     if (recurso.tipo.toLowerCase() == "youtube") {
-        crearModalYoutube(recurso, idModal)
+        crearModalYoutube(recurso, idModal, listaRecursos)
     }
 
     if (recurso.tipo.toLowerCase() == "link") {
-        crearModalLink(recurso, idModal)
+        crearModalLink(recurso, idModal, listaRecursos)
     }
 }
 
-function crearModalPDF(recurso, idModal) {
+function crearModalPDF(recurso, idModal, listaRecursos) {
     let modal = "";
 
     modal += '<div class="uk-modal-dialog uk-modal-body">'
@@ -175,6 +175,12 @@ function crearModalPDF(recurso, idModal) {
     modal += "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='" + recurso.url + "' width='640' height='480'></iframe></div>"
     modal += '</div>'
     modal += '<p class="uk-text-right">'
+    if (necesitoBotonAnterior(idModal, listaRecursos)) {
+        modal += '<button class="uk-button uk-button-default boton-ant" type="button">Ant</button>'
+    }
+    if (necesitoBotonSiguiente(idModal, listaRecursos)) {
+        modal += '<button class="uk-button uk-button-default boton-sig" type="button">Sig</button>'
+    }
     modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
     if (recurso.archivo != "") {
         modal += '<a href="assets/' + recurso.archivo + '" download target="_blank">'
@@ -185,9 +191,26 @@ function crearModalPDF(recurso, idModal) {
     modal += '</div>'
 
     document.querySelector("#modal-recurso").innerHTML = modal;
+
+    if (necesitoBotonAnterior(idModal, listaRecursos)) {
+        document.querySelector(".boton-ant").addEventListener("click", function() {
+            crearModal(listaRecursos[idModal - 1], idModal - 1, listaRecursos);
+        })
+    }
+    if (necesitoBotonSiguiente(idModal, listaRecursos)) {
+        document.querySelector(".boton-sig").addEventListener("click", function() {
+            crearModal(listaRecursos[idModal + 1], idModal + 1, listaRecursos);
+        })
+    }
+
+    $('#modal-recurso').on({
+        'hide.uk.modal': function(){
+            document.querySelector("#modal-recurso").innerHTML = "";
+        }
+    });
 }
 
-function crearModalYoutube(recurso, idModal) {
+function crearModalYoutube(recurso, idModal, listaRecursos) {
 
     let codigoYoutube = recurso.url.split("=")[1]
 
@@ -205,14 +228,37 @@ function crearModalYoutube(recurso, idModal) {
     modal += "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/" + codigoYoutube + "' frameborder='0' allowfullscreen></iframe></div>"
     modal += '</div>'
     modal += '<p class="uk-text-right">'
+    if (necesitoBotonAnterior(idModal, listaRecursos)) {
+        modal += '<button class="uk-button uk-button-default boton-ant" type="button">Ant</button>'
+    }
+    if (necesitoBotonSiguiente(idModal, listaRecursos)) {
+        modal += '<button class="uk-button uk-button-default boton-sig" type="button">Sig</button>'
+    }
     modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
     modal += '</p>'
     modal += '</div>'
 
     document.querySelector("#modal-recurso").innerHTML = modal;
+
+    if (necesitoBotonAnterior(idModal, listaRecursos)) {
+        document.querySelector(".boton-ant").addEventListener("click", function() {
+            crearModal(listaRecursos[idModal - 1], idModal - 1, listaRecursos);
+        })
+    }
+    if (necesitoBotonSiguiente(idModal, listaRecursos)) {
+        document.querySelector(".boton-sig").addEventListener("click", function() {
+            crearModal(listaRecursos[idModal + 1], idModal + 1, listaRecursos);
+        })
+    }
+
+    $('#modal-recurso').on({
+        'hide.uk.modal': function(){
+            document.querySelector("#modal-recurso").innerHTML = "";
+        }
+    });
 } 
 
-function crearModalLink(recurso, idModal) {
+function crearModalLink(recurso, idModal, listaRecursos) {
     let modal = "";
 
     modal += '<div class="uk-modal-dialog uk-modal-body">'
@@ -224,12 +270,59 @@ function crearModalLink(recurso, idModal) {
     }
 
     modal += '<p class="uk-text-right">'
+    if (necesitoBotonAnterior(idModal, listaRecursos)) {
+        modal += '<button class="uk-button uk-button-default boton-ant" type="button">Ant</button>'
+    }
+    if (necesitoBotonSiguiente(idModal, listaRecursos)) {
+        modal += '<button class="uk-button uk-button-default boton-sig" type="button">Sig</button>'
+    }
     modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
     modal += '<a href="' + recurso.url + '" target="_blank">'
-    modal += '<button class="uk-button uk-button-primary boton-descarga" type="button">Ver Nota</button>'
+    modal += '<button class="uk-button uk-button-primary boton-descarga" type="button">Ver más</button>'
     modal += '</a>'
     modal += '</p>'
     modal += '</div>'
 
     document.querySelector("#modal-recurso").innerHTML = modal;
+
+    if (necesitoBotonAnterior(idModal, listaRecursos)) {
+        document.querySelector(".boton-ant").addEventListener("click", function() {
+            crearModal(listaRecursos[idModal - 1], idModal - 1, listaRecursos);
+        })
+    }
+    if (necesitoBotonSiguiente(idModal, listaRecursos)) {
+        document.querySelector(".boton-sig").addEventListener("click", function() {
+            crearModal(listaRecursos[idModal + 1], idModal + 1, listaRecursos);
+        })
+    }
+
+    $('#modal-recurso').on({
+        'hide.uk.modal': function(){
+            document.querySelector("#modal-recurso").innerHTML = "";
+        }
+    });
+}
+
+function necesitoBotonAnterior(idRecurso, listaRecursos) {
+    if (idRecurso == 0) {
+        return false;
+    }
+
+    if (listaRecursos[idRecurso].categoria != listaRecursos[idRecurso-1].categoria) {
+        return false;
+    }
+
+    return true;
+}
+
+function necesitoBotonSiguiente(idRecurso, listaRecursos) {
+    if (idRecurso >= listaRecursos.length - 1) {
+        return false;
+    }
+
+    if (listaRecursos[idRecurso].categoria != listaRecursos[idRecurso+1].categoria) {
+        return false;
+    }
+
+    return true;
 }
