@@ -60,7 +60,8 @@ section.alianzas p{
 .slider-aliados li img {
     top: 50%;
     position: relative;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
 
 footer {
@@ -109,6 +110,26 @@ footer ul li a svg {
 .slider-container {
     width: 90%;
     margin: 0 auto;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+.w90 {
+    width: 90% !important;
+}
+
+.w80 {
+    width: 80% !important;
+}
+
+.w70 {
+    width: 70% !important;
+}
+
+.w60 {
+    width: 60% !important;
 }
 
 @media (max-width: 450px) {
