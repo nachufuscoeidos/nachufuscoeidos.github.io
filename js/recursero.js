@@ -181,7 +181,8 @@ function crearModalPDF(recurso, idModal, listaRecursos) {
     if (necesitoBotonSiguiente(idModal, listaRecursos)) {
         modal += '<button class="uk-button uk-button-default boton-sig" type="button"><span uk-icon="icon:chevron-double-right; ratio: 1.5"></span></button>'
     }
-    modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
+    modal += '<button class="uk-button uk-button-default uk-modal-close cerrar-mobile" type="button"><span uk-icon="close"></button>'
+    modal += '<button class="uk-button uk-button-default uk-modal-close cerrar-desktop" type="button">Cerrar</button>'
     if (recurso.archivo != "") {
         modal += '<a href="assets/' + recurso.archivo + '" download target="_blank">'
         modal += '<button class="uk-button uk-button-primary boton-descarga" type="button">Descargar</button>'
@@ -234,7 +235,8 @@ function crearModalYoutube(recurso, idModal, listaRecursos) {
     if (necesitoBotonSiguiente(idModal, listaRecursos)) {
         modal += '<button class="uk-button uk-button-default boton-sig" type="button"><span uk-icon="icon:chevron-double-right; ratio: 1.5"></span></button>'
     }
-    modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
+    modal += '<button class="uk-button uk-button-default uk-modal-close cerrar-mobile" type="button"><span uk-icon="close"></button>'
+    modal += '<button class="uk-button uk-button-default uk-modal-close cerrar-desktop" type="button">Cerrar</button>'
     modal += '</p>'
     modal += '</div>'
 
@@ -276,7 +278,8 @@ function crearModalLink(recurso, idModal, listaRecursos) {
     if (necesitoBotonSiguiente(idModal, listaRecursos)) {
         modal += '<button class="uk-button uk-button-default boton-sig" type="button"><span uk-icon="icon:chevron-double-right; ratio: 1.5"></span></button>'
     }
-    modal += '<button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>'
+    modal += '<button class="uk-button uk-button-default uk-modal-close cerrar-mobile" type="button"><span uk-icon="close"></button>'
+    modal += '<button class="uk-button uk-button-default uk-modal-close cerrar-desktop" type="button">Cerrar</button>'
     modal += '<a href="' + recurso.url + '" target="_blank">'
     modal += '<button class="uk-button uk-button-primary boton-descarga" type="button">Ver más</button>'
     modal += '</a>'

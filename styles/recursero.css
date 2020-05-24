@@ -144,9 +144,42 @@ section.inicio {
     padding: 4px 10px;
 }
 
+.botones-cat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cerrar-mobile {
+    display: none;
+}
+
 @media (max-width: 450px) {
     h1 {
         font-size: 28px;
+    }
+
+    button.boton-modal {
+        width: 100%;
+        line-height: 20px;
+        padding: 15px 0px;
+    }
+
+    div.uk-modal-body {
+        width: 85%;
+    }
+
+    div.uk-modal-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .cerrar-mobile {
+        display: inline-block;
+        padding: 0px 10px;
+    }
+
+    .cerrar-desktop {
+        display: none;
     }
 }
 
