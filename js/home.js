@@ -1,5 +1,5 @@
 window.addEventListener("load", paginaHome);
 
 function paginaHome() {
-    loaderSlider("principal.txt", "principal");
+    loaderSlider("principal.txt?" + Math.random(), "principal");
 }

@@ -22,5 +22,5 @@ function paginaCamp() {
         
     }
 
-    loaderSlider("famosos.txt", "famosos");
+    loaderSlider("famosos.txt?" + Math.random(), "famosos");
 }

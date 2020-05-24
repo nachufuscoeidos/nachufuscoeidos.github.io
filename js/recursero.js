@@ -3,7 +3,7 @@ window.addEventListener("load", paginaRecursero);
 function paginaRecursero() {
     let recursos = [];
 
-    fetch("assets/recursero.csv")
+    fetch("assets/recursero.csv?" + Math.random())
     .then(function(response) {
         return response.text();
     })
